@@ -1,0 +1,12 @@
+<button type="button" class="btn btn-primary" (click)="onToggle()">Display details</button>
+<p *ngIf="showParagraph">
+    Secret password = tuna
+</p>
+
+<hr>
+<ul>
+   <li *ngFor="let time of timestamp; let i=index" [ngStyle]="{'backgroundColor': i >= 4 ? 'blue' : 'none'}"
+       [ngClass]="{'highlight': i >= 4}">
+        {{ time }}
+   </li> 
+</ul>
