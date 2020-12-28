@@ -1,0 +1,8 @@
+.list-group-item {
+    margin: 5px 0px;
+    border: 2px solid darkblue;
+}
+
+.list-group-item:hover {
+    background-color: honeydew;
+}
