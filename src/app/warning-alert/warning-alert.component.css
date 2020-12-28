@@ -1,3 +1,5 @@
 p {
-    color: orange; 
+    border: 1px solid orange;
+    padding: 20px;
+    background-color: lightsalmon;
 }

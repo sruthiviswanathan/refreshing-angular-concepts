@@ -1,3 +1,5 @@
 p {
-    color: green;
+    border: 1px solid green;
+    padding: 20px;
+    background-color: lightgreen;
 }
