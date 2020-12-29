@@ -1,0 +1,9 @@
+<div class="container">
+    <app-game-control (eventFired)="onEventFired($event)"></app-game-control>
+    <div class="row">
+        <div class="col-sm-12">
+            <app-odd [value]="oddNumbers"></app-odd>
+            <app-even [value]="evenNumbers"></app-even>
+        </div>
+    </div>
+</div>
