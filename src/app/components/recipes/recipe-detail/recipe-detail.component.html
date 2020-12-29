@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-sm-12">
-        <img src="https://i.ytimg.com/vi/RoHWiA6pogg/maxresdefault.jpg" alt="recipeName" class="img-responsive" style="max-width: 100%"/>
+        <img src="{{selectedRecipe.imagePath}}" alt="{{selectedRecipe.name}}" class="img-responsive" style="max-width: 100%"/>
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <h2>Recipe Name</h2>
+        <h2>{{selectedRecipe.name}}</h2>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
 
 <div class="row">
     <div class="col-sm-12">
-        Description
+        {{selectedRecipe.description}}
     </div>
 </div>
 
