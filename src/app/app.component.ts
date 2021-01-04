@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  featureSelected: string = 'recipe';
-
-  selectedFeature(feature: string) {
-    this.featureSelected = feature;
-  }
 }

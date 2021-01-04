@@ -1,4 +1,4 @@
-<a *ngFor="let recipe of recipesList" class="list-group-item clearfix" (click)="onRecipeSelected(recipe)">
+<a *ngFor="let recipe of recipesList; let i = index" class="list-group-item clearfix" [routerLink]="[i]" routerLinkActive="active">
     <div class="float-left">
         <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
         <p class="list-group-item-text">{{ recipe.description }}</p>
