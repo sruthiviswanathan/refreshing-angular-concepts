@@ -14,6 +14,7 @@ export class RecipeEditComponent implements OnInit {
   id: number;
   editMode: boolean = false;
   recipeForm: FormGroup;
+  recipe: Recipe;
 
   constructor(private route: ActivatedRoute, private recipeService: RecipeService, private router: Router) { }
 
@@ -26,17 +27,16 @@ export class RecipeEditComponent implements OnInit {
   }
 
   initForm() {
-    let recipe;
     if (this.editMode) {
-      recipe = this.recipeService.getRecipe(this.id);
+      this.recipe = this.recipeService.getRecipe(this.id);
     }
     
-    let recipeName = this.editMode ? recipe.name : '';
-    let description = this.editMode ? recipe.description : '';
-    let imagePath = this.editMode ? recipe.imagePath: '';
+    let recipeName = (this.editMode && this.recipe) ? this.recipe.name : '';
+    let description = (this.editMode && this.recipe) ? this.recipe.description : '';
+    let imagePath = (this.editMode && this.recipe) ? this.recipe.imagePath: '';
     let recipeIngredients = new FormArray([]);
-    if (recipe && recipe.ingredients) {
-      for(let ingredient of recipe.ingredients) {
+    if (this.recipe && this.recipe.ingredients) {
+      for(let ingredient of this.recipe.ingredients) {
         recipeIngredients.push(
           new FormGroup({
             name: new FormControl(ingredient.name, Validators.required),

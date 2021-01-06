@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="recipe || !editMode">
     <div class="col-sm-12">
         <form [formGroup]="recipeForm" (ngSubmit)="onSave()">
 
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" *ngIf="imagePath.value">
                 <div class="col-sm-12">
                     <img [src]="imagePath.value" class="img-responsive">
                 </div>
