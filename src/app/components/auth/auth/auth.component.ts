@@ -42,4 +42,8 @@ export class AuthComponent implements OnInit {
     })
   }
 
+  onClearError() {
+    this.error = null;
+  }
+
 }
